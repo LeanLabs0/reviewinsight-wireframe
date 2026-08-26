@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReviewInsight methodology</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; color: #111; background: #fff; line-height: 1.5; }
+    header, footer { border-bottom: 1px solid #e5e5e5; padding: 1rem 5%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    footer { border-bottom: 0; border-top: 1px solid #e5e5e5; display: grid; grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); gap: 0.5rem 2rem; }
+    .text-xl { font-size: 1.25rem; }
+    .font-bold { font-weight: 700; }
+    a.btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid #111; background: #111; color: #fff; text-decoration: none; font-size: 0.875rem; }
+    nav { display: flex; gap: 0.75rem; }
+    main { max-width: 48rem; margin: 0 auto; padding: 3rem 5%; }
+    h1 { font-size: 2.25rem; margin: 0 0 1rem; }
+    h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; }
+    h3 { font-size: 1.125rem; margin: 0 0 0.5rem; }
+    p { margin: 0 0 1rem; color: #444; }
+    .card { border: 1px solid #e5e5e5; padding: 1.25rem; margin-bottom: 1rem; }
+    .formula { font-family: ui-monospace, monospace; background: #f5f5f5; border: 1px solid #e5e5e5; padding: 1rem; }
+    .grid { display: grid; gap: 1rem; }
+    @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .cta { background: #f5f5f5; padding: 3rem 5%; text-align: center; }
+    .cta h2 { margin-top: 0; }
+    .src { color: #999; font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="text-xl font-bold">ReviewInsight</span>
+    <nav>
+      <a href="#" class="btn">Methodology</a>
+      <a href="#" class="btn">See a company</a>
+    </nav>
+  </header>
+  <main>
+    <h1>ReviewInsight methodology</h1>
+    <p>Read how we calculate each rating. Every figure here can be rebuilt from the numbers on each company's vendor pages.</p>
+    <h2>Where we read the data</h2>
+    <p>We read public vendor pages for every company. Each platform contributes its rating, review count, and review text with dates.</p>
+    <p>The platforms: G2, Trustpilot, Capterra, and Gartner Peer Insights.</p>
+    <p>We check these pages through DataForSEO and Firecrawl, and record what we find.</p>
+    <h2>The four ratings</h2>
+    <p>Each ReviewInsight Rating averages four parts, weighted equally. Every part is a whole number from 1 to 100.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Review Average</h3>
+        <p>A platform with more reviews carries more of this rating, because we count every review once rather than averaging the platform averages.</p>
+        <p>We calculate this as the average star rating across every review we can see, counted review by review.</p>
+      </div>
+      <div class="card">
+        <h3>Reliable</h3>
+        <p>Whether the platforms tell the same story. A wide gap between them brings this rating down sharply.</p>
+        <p>A company found on only one platform also scores lower here. Nothing corroborates it. Differences in review count never count against a company. The gap that matters is the product.</p>
+      </div>
+      <div class="card">
+        <h3>Recent</h3>
+        <p>Reviews from the last year count. Lifetime totals do not.</p>
+        <p>This rating measures how many reviews came in recently and how much of the total base they represent.</p>
+      </div>
+      <div class="card">
+        <h3>Result-Specific</h3>
+        <p>How often reviewers name an outcome a stranger could check. A number, a time saved, a tool replaced. Not vibes.</p>
+        <p>This rating scans the review text for statements like cut onboarding from three weeks to five days rather than saves time.</p>
+      </div>
+    </div>
+    <h2>Overall Rating</h2>
+    <p>The ReviewInsight Rating averages four parts, weighted equally.</p>
+    <p class="formula">ReviewInsight Rating = (Review Average + Reliable + Recent + Result-Specific) / 4</p>
+    <p>Every part is a whole number from 1 to 100.</p>
+    <h2>Not Rated</h2>
+    <p>A company needs at least two platforms, 15 reviews total, and 5 reviews in the last year. <span class="src">[src: live methodology page, Not Rated criteria]</span></p>
+    <p>Below that it shows Not Rated rather than a number.</p>
+    <h2>What we refuse</h2>
+    <p>Paid placement. A company cannot buy a rank or a better rating.</p>
+    <p>Invented numbers. If we cannot read a figure we show that we could not. We never fill a gap with an estimate.</p>
+    <p>No quotes over 40 words.</p>
+    <p>Hidden math. Every figure is rebuildable from the numbers on the vendor pages.</p>
+    <h2>Known gaps</h2>
+    <p>Gartner Peer Insights puts review text behind a login. We use its rating and date, and do not touch the gated text.</p>
+    <p>Two vendors in this preview have no listing on one platform. We show the gap rather than hide it.</p>
+  </main>
+  <section class="cta">
+    <h2>Check a company rating</h2>
+    <p>See how any indexed company rates across the four parts and read the reviews behind each one.</p>
+    <p><a href="#" class="btn">Browse companies</a></p>
+  </section>
+  <footer>
+    <p>Product</p>
+    <a href="#" class="btn">Methodology</a>
+    <a href="#" class="btn">Companies</a>
+    <p>Company</p>
+    <a href="#" class="btn">About</a>
+    <a href="#" class="btn">Contact</a>
+    <a href="#" class="btn">Privacy</a>
+    <a href="#" class="btn">Terms</a>
+  </footer>
+</body>
+</html>
